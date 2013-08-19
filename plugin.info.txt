@@ -1,0 +1,7 @@
+base   uilanguage
+author Viktor Söderqvist
+email  viktor@zuiderkwast.se
+date   2013-08-19
+name   UI Language plugin
+desc   Changes the user interface language to match the language of the current page
+url    https://www.dokuwiki.org/plugin:uilanguage
