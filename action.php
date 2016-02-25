@@ -17,7 +17,7 @@ class action_plugin_uilanguage extends DokuWiki_Action_Plugin {
     /**
      * Register the events
      */
-    public function register($controller) {
+    public function register(Doku_Event_Handler $controller) {
         $controller->register_hook('DOKUWIKI_STARTED', 'BEFORE', $this, 'changeUiLanguage');
         $controller->register_hook('TPL_METAHEADER_OUTPUT', 'BEFORE', $this, 'handleMetaheaderOutput');
     }
