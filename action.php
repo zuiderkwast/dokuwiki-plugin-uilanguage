@@ -45,7 +45,7 @@ class action_plugin_uilanguage extends DokuWiki_Action_Plugin {
                 }
             }
             // 3. Set the UI language to one of the browser's accepted languages
-            $languages = preg_split(',', preg_replace('/\(;q=\d+\.\d+\)/i', '', getenv('HTTP_ACCEPT_LANGUAGE')));
+            $languages = explode(',', preg_replace('/\(;q=\d+\.\d+\)/i', '', getenv('HTTP_ACCEPT_LANGUAGE')));
             foreach ($languages as $l) {
                 if ($this->langOK($l)) {
                     $conf['lang'] = $l;
